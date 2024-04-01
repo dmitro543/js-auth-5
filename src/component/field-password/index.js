@@ -6,7 +6,7 @@ class FieldPassword {
 
         const type = input.getAttribute('type')
 
-        if(tupe === 'password') {
+        if(type === 'password') {
             input.setAttribute('type', 'text')
         } else {
             input.setAttribute('type', 'password')
