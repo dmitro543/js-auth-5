@@ -1,0 +1,16 @@
+<div class="field-select">
+    <span class="field-span">{{label}}</span>
+    <div class="container">
+        <button onclick="fieldSelect.toggle(this)" class="select">
+            <span class="value">{{placeholder}}</span>
+            <div class="field-icon"></div>
+        </button>
+        <ul active class="option-list">
+            {{#each list}}
+               <li onclick="fieldSelect.change(this); {{../action}}('{{../name}}', {{value}})" class="list-option">
+                  {{text}}
+               </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

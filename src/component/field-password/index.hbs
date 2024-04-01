@@ -1,0 +1,7 @@
+<div class="field">
+    <label for="{{name}}" class="field-title">{{label}}</label>
+    <div class="field-wrap">
+        <input oninput="{{action}}(this.name, this.value)" type="password" class="wrap" name="{{name}}" value="{{value}}" placeholder="{{placeholder}}">
+        <span onclick="fieldPassword.toggle(this)" class="icon"></span>
+    </div>
+</div>

@@ -13,10 +13,9 @@ main {
 	gap: 14px;
 }
 
-.button {
-	background-image: url('/svg/back.svg');
-	width: 26px;
-	height: 26px;
+.picture {
+	width: 100px;
+	height: 100px;
 }
 
 .auth {
@@ -29,6 +28,11 @@ main {
 	color: #fff;
 	padding: 12px;
 	border-radius: 12px;
+	transition: opacity 0.7s;
+}
+
+.sign:hover {
+	opacity: 0.7;
 }
 
 .section {

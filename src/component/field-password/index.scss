@@ -1,0 +1,26 @@
+// @use '../../style' as s;
+// @use '../../field.index.scss' as field;
+
+.field {
+    display: grid;
+    gap: 12px;
+}
+
+.wrap {
+    background: rgba(247, 247, 247, 1);
+    padding: 12px;
+    width: 100%;
+    font-size: 14px;
+    color: rgba(136, 136, 136, 1);
+}
+
+.icon {
+    background-image: url('/svg/icon.svg');
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    position: absolute;
+    left: 420px;
+    margin-top: 12px;
+}
+
