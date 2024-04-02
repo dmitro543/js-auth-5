@@ -1,18 +1,48 @@
-.text {
-    border: 1px solid rgba(247, 247, 247, 1);
-    border-radius: 12px;
-    padding: 12px;
+@use '../../style' as s;
+@use '../field/index.scss' as field;
+
+.field__checkbox {
+  .right {
+    border: 1px solid s.color('box');
+    padding: s.space(4);
+    border-radius: 10px;
+    width: 100%;
     display: flex;
-    gap: 8px;
-}
+    gap: s.space(2);
+    align-items: center;
+    line-height: 1em;
 
-.description {
+    cursor: pointer;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: s.color(gray);
+    }
+
+    &[active] .icon-span {
+      background-image: url('/svg/icon-picture.svg');
+    }
+  }
+
+  .description {
     font-size: 14px;
-}
+    color: s.color('dark');
+    padding-top: 3px;
+    
+  }
 
-.icon-span {
+  .icon-span {
+    display: block;
+    height: 14px;
+    width: 14px;
+
     background-image: url('/svg/icon-cube.svg');
-    width: 15px;
-    height: 15px;
-    background-size: cover;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .field__input--disabled {
+    display: none;
+  }
 }

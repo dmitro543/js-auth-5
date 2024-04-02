@@ -5,9 +5,8 @@
           <div class="auth">Реєстрація</div>
           {{> field action="signupForm.change" label="Ел. адреса" type="email" name="email" placeholder="Ваш email"}}
           {{> field-password action="signupForm.change" placeholder="Введіть пароль"}}
-          {{> field-select action="signupForm.change" label="Роль" name="role" placeholder="Оберіть роль"}}
+          {{> field-select action="signupForm.change" label="Роль" name="role" placeholder="Оберіть роль" list=data.role}}
           {{> field-checkbox action="signupForm.change" label="Ви погоджуєтеся з правилами сервіса" name="isConfirm"}}
-          {{!-- <span name="isConfirm">Помилка</span> --}}
           <button onclick="signupForm.submit()" class="sign" type="button">Зареєструватися</button>
           <span class="error">Внимание, ошибка!</span>
        </form>

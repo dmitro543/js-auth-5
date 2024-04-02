@@ -60,10 +60,16 @@ router.post('/sign-up', function (req, res) {
    }
 
    try {
+      User.create({ email, password, role })
+
       return res.status(200).json({
         message: "Користувач успішно створений",
       })
-    }  catch(err) {}
+    }  catch(err) {
+      return res.status(400).json({
+        message: err.message,
+      })
+    }
 })
 
 // Підключаємо роутер до бек-енду

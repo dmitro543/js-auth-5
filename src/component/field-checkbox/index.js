@@ -4,4 +4,4 @@ class FieldCheckbox {
     }
 }
 
-window.FieldCheckbox = FieldCheckbox
+window.fieldCheckbox = FieldCheckbox

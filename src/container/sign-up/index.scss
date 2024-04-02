@@ -1,5 +1,14 @@
 @use '../../style' as s;
 
+// @use './space.scss';
+// @forward './space.scss';
+
+// @use './var.scss';
+// @forward './var.scss';
+
+// @use './click.scss';
+// @forward './click.scss';
+
 main {
 	padding: s.space(4);
 }

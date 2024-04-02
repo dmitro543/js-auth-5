@@ -62,11 +62,33 @@ class SignupForm extends Form {
       }
    }
 
-   submit = () => {
+   submit = async () => {
       if(this.disabled === true) {
          this.validateAll()
       } else {
          console.log(this.value)
+
+         this.setAlert('progress', 'Завантаження')
+
+         try {
+           const res = await fetch('sign-up', {
+            method: 'POST',
+            headers: {
+               'Content-Type' : 'application/json'
+            },
+            body: this.convertData(),
+           })
+
+           const data = await res.json()
+
+           if(res.ok) {
+             this.setAlert('success', data.message)
+           } else {
+              this.setAlert('error', data.message)
+           }
+         } catch(error) {
+            this.setAlert('error', error.message)
+         }
       }
    }
 
@@ -81,19 +103,19 @@ class SignupForm extends Form {
       })
    }
 
-   // static value = {}
-   // static validate = (name, value) => {
-   //    return true
-   // }
+   static value = {}
+   static validate = (name, value) => {
+      return true
+   }
 
-   // static submit = () => {
-   //   console.log(this.value)
-   // }
+   static submit = () => {
+     console.log(this.value)
+   }
 
-   // static change = (name, value) => {
-   //    console.log(name, value)
-   //    if (this.validate(name, value)) this.value[name] = value
-   // }
+   static change = (name, value) => {
+      console.log(name, value)
+      if (this.validate(name, value)) this.value[name] = value
+   }
 }
 
 window.signupForm = SignupForm
