@@ -99,23 +99,9 @@ class SignupForm extends Form {
          [this.FIELD_NAME.PASSWORD]:
            this.value[this.FIELD_NAME.PASSWORD],
          [this.FIELD_NAME.ROLE]:
-           this.value[this.FIELD_NAME.ROLE]
+           this.value[this.FIELD_NAME.ROLE] 
       })
-   }
-
-   static value = {}
-   static validate = (name, value) => {
-      return true
-   }
-
-   static submit = () => {
-     console.log(this.value)
-   }
-
-   static change = (name, value) => {
-      console.log(name, value)
-      if (this.validate(name, value)) this.value[name] = value
    }
 }
 
-window.signupForm = SignupForm
+window.signupForm = new SignupForm

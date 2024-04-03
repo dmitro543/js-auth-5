@@ -1,14 +1,5 @@
 @use '../../style' as s;
 
-// @use './space.scss';
-// @forward './space.scss';
-
-// @use './var.scss';
-// @forward './var.scss';
-
-// @use './click.scss';
-// @forward './click.scss';
-
 main {
 	padding: s.space(4);
 }
@@ -32,16 +23,28 @@ main {
 	font-size: 24px;
 }
 
-.sign {
+.button {
 	background: rgba(244, 111, 23, 1);
 	color: #fff;
 	padding: 12px;
 	border-radius: 12px;
-	transition: opacity 0.7s;
-}
 
-.sign:hover {
-	opacity: 0.7;
+	@include s.click;
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      cursor: default;
+
+    &:hover,
+    &:active {
+       opacity: 0.5;
+       cursor: default;
+    }
+  }
 }
 
 .section {
@@ -55,4 +58,58 @@ main {
 	border: 1px solid rgba(251, 96, 97, 1);
 	color: rgba(251, 96, 97, 1);
 	border-radius: 12px;
+}
+
+.item {
+	display: grid;
+	gap: 8px;
+}
+
+.form {
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+	&_error {
+		color: red;
+	    font-size: 12px;
+        display: none;
+	}
+	
+	&--active {
+		display: block;
+	}
+}
+
+.alert {
+	border: 1px solid transparent;
+	border-radius: 10px;
+	padding: s.space(3) s.space(4);
+	font-size: 14px;
+  
+	&--success {
+	  border-color: green;
+	  color: green;
+	}
+  
+	&--error {
+	  border-color: red;
+	  color: red;
+	}
+  
+	&--progress {
+	  border-color: blue;
+	  color: blue;
+	}
+  
+	&--disabled {
+	  display: none;
+	}
+  }
+
+.validation {
+	&--active {
+	  border-color: s.color(red) !important;
+	}
 }

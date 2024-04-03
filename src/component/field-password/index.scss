@@ -14,16 +14,6 @@
     color: rgba(136, 136, 136, 1);
 }
 
-// .icon {
-//     background-image: url('/svg/icon.svg');
-//     width: 20px;
-//     height: 20px;
-//     background-size: cover;
-//     position: absolute;
-//     left: 420px;
-//     margin-top: 12px;
-// }
-
 .field--password {
     .field__wrapper {
         width: 100%;
@@ -46,5 +36,9 @@
             top: calc(50% - 10px);
         }
     }
+}
+
+.field-title {
+    font-size: 14px;
 }
 

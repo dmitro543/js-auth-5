@@ -1,10 +1,10 @@
-// export const REG_EXP_EMAIL = new ReqExp(
-//    /^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/,
-// )
+export const REG_EXP_EMAIL = new ReqExp(
+   /^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/,
+)
 
-// export const REG_EXP_PASSWORD = new ReqExp(
-//     /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
-// )
+export const REG_EXP_PASSWORD = new ReqExp(
+    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
+)
 
 export class Form {
     FIELD_NAME = {}
