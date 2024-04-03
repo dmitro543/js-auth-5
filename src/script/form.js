@@ -1,9 +1,9 @@
-export const REG_EXP_EMAIL = new ReqExp(
-   /^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/,
-)
-
-export const REG_EXP_PASSWORD = new ReqExp(
-    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
+export const REG_EXP_EMAIL = new RegExp(
+    /^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/,
+  )
+  
+export const REG_EXP_PASSWORD = new RegExp(
+    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
 )
 
 export class Form {
@@ -31,7 +31,7 @@ export class Form {
 
     setError = (name, error) => {
         const span = document.querySelector(
-            `.form_error[name="${name}"]`,
+            `.form__error[name="${name}"]`,
         )
 
         const field = document.querySelector(

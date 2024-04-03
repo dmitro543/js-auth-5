@@ -66,12 +66,15 @@ main {
 }
 
 .form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 	&__item {
 		display: flex;
 		flex-direction: column;
 		gap: 4px;
 	}
-	&_error {
+	&__error {
 		color: red;
 	    font-size: 12px;
         display: none;

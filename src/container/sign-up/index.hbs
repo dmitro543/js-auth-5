@@ -1,27 +1,27 @@
 <main>
     <div class="page">
-       <form class="section">
+       <form class="form">
           {{> back-button}}
           <div class="auth">Реєстрація</div>
           <div class="form__item">
             {{> field action="signupForm.change" label="Ел. адреса" type="email" name="email" placeholder="Ваш email"}}
-            <span name="email" class="form_error">Помилка</span>
+            <span name="email" class="form__error">Помилка</span>
           </div>
           <div class="form__item">
             {{> field-password action="signupForm.change" placeholder="Введіть пароль" label="Пароль" name="password"}}
-            <span name="password" class="form_error">Помилка</span>
+            <span name="password" class="form__error">Помилка</span>
           </div>
           <div class="form__item">
             {{> field-password action="signupForm.change" placeholder="Введіть пароль" label="Пароль ще раз" name="passwordAgain"}}
-            <span name="passwordAgain" class="form_error">Помилка</span>
+            <span name="passwordAgain" class="form__error">Помилка</span>
           </div>
           <div class="form__item">
             {{> field-select action="signupForm.change" label="Роль" name="role" placeholder="Оберіть роль" list=data.role}}
-            <span name="role" class="form_error">Помилка</span>
+            <span name="role" class="form__error">Помилка</span>
           </div>
           <div class="form__item">
             {{> field-checkbox action="signupForm.change" label="Ви погоджуєтеся з правилами сервіса" name="isConfirm"}}
-            <span name="isConfirm" class="form_error">Помилка</span>
+            <span name="isConfirm" class="form__error">Помилка</span>
           </div>
           <button onclick="signupForm.submit()" class="button button--disabled" type="button">Зареєструватися</button>
           <span class="alert alert--disabled">Внимание, ошибка!</span>

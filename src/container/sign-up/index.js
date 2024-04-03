@@ -22,23 +22,19 @@ class SignupForm extends Form {
       if(String(value).length < 1) {
          return this.FIELD_ERROR.IS_EMPTY
       }
-
       if(String(value).length > 20) {
          return this.FIELD_ERROR.IS_BIG
       }
-
       if(name === this.FIELD_NAME.EMAIL) {
          if(!REG_EXP_EMAIL.test(String(value))) {
             return this.FIELD_ERROR.EMAIL
          }
       }
-
       if(name === this.FIELD_NAME.PASSWORD) {
          if(!REG_EXP_PASSWORD.test(String(value))) {
             return this.FIELD_ERROR.PASSWORD
          }
       }
-
       if(name === this.FIELD_NAME.PASSWORD_AGAIN) {
          if (
             String(value) !==
@@ -47,14 +43,11 @@ class SignupForm extends Form {
             return this.FIELD_ERROR.PASSWORD_AGAIN
          }
       }
-
       if(name === this.FIELD_NAME.ROLE) {
          if(isNaN(value)) {
             return this.FIELD_ERROR.ROLE
          }
       }
-
-      
       if(name === this.FIELD_NAME.IS_CONFIRM) {
          if(Boolean(value) !== true) {
             return this.FIELD_NAME.IS_CONFIRM
