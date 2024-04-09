@@ -1,0 +1,92 @@
+@use '../../style' as s;
+
+.page {
+    width: 380px;
+    border: 1px solid #000;
+    padding: 14px;
+    border-radius: 12px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.form {
+    display: grid;
+    gap: 16px;
+}
+
+.auth {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+.button {
+    background: rgba(244, 111, 23, 1);
+    color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+	&__error {
+		color: red;
+	    font-size: 12px;
+        display: none;
+	}
+	
+	&--active {
+		display: block;
+	}
+}
+
+.page-title {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.alert {
+	border: 1px solid transparent;
+	border-radius: 10px;
+	padding: s.space(3) s.space(4);
+	font-size: 14px;
+  
+	&--success {
+	  border-color: green;
+	  color: green;
+	}
+  
+	&--error {
+	  border-color: red;
+	  color: red;
+	}
+  
+	&--progress {
+	  border-color: blue;
+	  color: blue;
+	}
+  
+	&--disabled {
+	  display: none;
+	}
+}
+
+.link-prefix {
+    font-size: 14px;
+    color: rgba(136, 136, 136, 1);
+}
+
+.link {
+    font-size: 14px;
+    color: rgba(244, 111, 23, 1);
+}
+

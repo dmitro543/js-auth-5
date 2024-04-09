@@ -1,4 +1,10 @@
-<div class="field">
+{{!-- <div class="field">
     <lalel for="{{name}}" class="label">{{label}}</lalel>
     <input oninput="{{action}}(this.name, this.value)" name="{{name}}" type="{{type}}" class="input validation" placeholder="{{placeholder}}">
+</div> --}}
+
+<div class="field">
+	<label for="{{name}}" class="field__label">{{label}}</label>
+	<input oninput="{{action}}(this.name, this.value)" type="{{type}}" class="field__input validation" name="{{name}}"
+	  value="{{value}}"	placeholder="{{placeholder}}">
 </div>

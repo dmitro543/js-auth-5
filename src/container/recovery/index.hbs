@@ -1,0 +1,14 @@
+<main>
+    <div class="page">
+       <form class="form">
+          {{> back-button}}
+          <div class="auth">Відновлення паролю</div>
+          <div class="form__item">
+            {{> field action="recoveryForm.change" label="Ел. адреса" type="email" name="email" placeholder="Ваш email"}}
+            <span name="email" class="form__error">Помилка</span>
+          </div>
+          <button onclick="recoveryForm.submit()" class="button button--disabled" type="button">Отримати код</button>
+          <span class="alert alert--disabled">Внимание, ошибка!</span>
+       </form>
+    </div>
+</main>

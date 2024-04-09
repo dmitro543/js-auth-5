@@ -40,7 +40,7 @@ export class Form {
 
         if (span) {
             span.classList.toggle(
-                '.form_error--active',
+                'form_error--active',
                 Boolean(error)
             )
             span.innerText = error || ''

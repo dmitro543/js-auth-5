@@ -1,12 +1,61 @@
+// @use '../../style' as s;
+// @use '../field/index.scss' as field;
+
+// .field__checkbox {
+//   .right {
+//     border: 1px solid s.color('box');
+//     padding: s.space(3);
+//     border-radius: 10px;
+//     width: 100%;
+//     display: flex;
+//     gap: s.space(2);
+//     align-items: center;
+//     line-height: 1em;
+
+//     cursor: pointer;
+//     transition: border-color 0.3s;
+
+//     &:hover {
+//       border-color: s.color(gray);
+//     }
+
+//     &[active] .icon-span {
+//       background-image: url('/svg/icon-picture.svg');
+//     }
+//   }
+
+//   .description {
+//     font-size: 14px;
+//     color: s.color('dark');
+//     padding-top: 3px;
+    
+//   }
+
+//   .icon-span {
+//     display: block;
+//     height: 14px;
+//     width: 14px;
+
+//     background-image: url('/svg/icon-cube.svg');
+//     background-size: 12px 12px;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//   }
+
+//   .field__input--disabled {
+//     display: none;
+//   }
+// }
+
 @use '../../style' as s;
 @use '../field/index.scss' as field;
 
-.field__checkbox {
-  .right {
+.field--checkbox {
+  .field__wrapper {
     border: 1px solid s.color('box');
-    padding: s.space(3);
+    padding: s.space(4);
     border-radius: 10px;
-    width: 100%;
+
     display: flex;
     gap: s.space(2);
     align-items: center;
@@ -19,19 +68,18 @@
       border-color: s.color(gray);
     }
 
-    &[active] .icon-span {
+    &[active] .field__icon {
       background-image: url('/svg/icon-picture.svg');
     }
   }
 
-  .description {
+  .field__label--checkbox {
     font-size: 14px;
     color: s.color('dark');
     padding-top: 3px;
-    
   }
 
-  .icon-span {
+  .field__icon {
     display: block;
     height: 14px;
     width: 14px;

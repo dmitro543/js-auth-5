@@ -11,11 +11,7 @@ main {
 	width: 350px;
 	display: grid;
 	gap: 14px;
-}
-
-.picture {
-	width: 100px;
-	height: 100px;
+    height: 500px;
 }
 
 .auth {
@@ -23,28 +19,8 @@ main {
 	font-size: 24px;
 }
 
-.button {
-	background: rgba(244, 111, 23, 1);
-	color: #fff;
-	padding: 12px;
-	border-radius: 12px;
-
-	@include s.click;
-
-    &:active {
-      opacity: 0.3;
-    }
-
-    &--disabled {
-      opacity: 0.5;
-      cursor: default;
-
-    &:hover,
-    &:active {
-       opacity: 0.5;
-       cursor: default;
-    }
-  }
+.page-divider {
+	border: 1px solid rgba(230, 230, 230, 1);
 }
 
 .section {
@@ -117,6 +93,30 @@ main {
 	}
 }
 
+.user {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	text-decoration: none;
+
+	&--click {
+      @include s.click;
+	  text-decoration: none;
+	}
+
+	&__title {
+       font-size: 16px;
+	   height: 16px;
+	   color: rgba(54, 54, 54, 1);
+	}
+
+	&__sub {
+       font-size: 14px;
+	   height: 14px;
+	   color: rgba(136, 136, 136, 1);
+	}
+}
+
 .link-prefix {
     font-size: 14px;
     color: rgba(136, 136, 136, 1);
@@ -125,4 +125,26 @@ main {
 .link {
     font-size: 14px;
     color: rgba(244, 111, 23, 1);
+    @include s.click;
 }
+
+.skeleton {
+	animation: skeleton animation is alternate;
+}
+
+@keyframes skeleton-animatiom {
+	from {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+
+	to {
+		background-color: rgba(0, 0, 0, 0.15);
+	}
+}
+
+.page-section {
+	display: grid;
+	gap: 24px;
+}
+
+

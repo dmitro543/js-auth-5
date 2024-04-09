@@ -1,0 +1,16 @@
+<main>
+    <div class="page">
+       <form class="form">
+          {{> back-button}}
+          <div class="auth">Підтвердження пошти</div>
+          <p class="page-title">На вашу пошту надіслано код для підтвердження облікового запису. Введіть його сюди</p>
+          <div class="form__item">
+            {{> field action="signupConfirmForm.change" label="Код" type="email" name="email" placeholder="Ваш код"}}
+            <span name="email" class="form__error">Помилка</span>
+          </div>
+          <button onclick="signupConfirmForm.submit()" class="button button--disabled" type="button">Підтвердити</button>
+          <span class="alert alert--disabled">Підтвердити</span>
+          <span class="link-prefix">Загубили код? <a class="link" href="/sign-up-cpnfirm" id="renew">Відправити ще раз</a></span>
+       </form>
+    </div>
+</main>

@@ -1,0 +1,22 @@
+<main>
+    <div class="page">
+       <form class="form">
+          {{> back-button}}
+          <div class="auth">Відновлення паролю</div>
+          <div class="form__item">
+            {{> field action="recoveryConfirmForm.change" label="Код" type="number" name="code" placeholder="Ваш код"}}
+            <span name="code" class="form__error">Помилка</span>
+          </div>
+          <div class="form__item">
+            {{> field-password action="recoveryConfirmForm.change" placeholder="Введіть пароль" label="Новий Пароль" name="password"}}
+            <span name="password" class="form__error">Помилка</span>
+          </div>
+          <div class="form__item">
+            {{> field-password action="recoveryConfirmForm.change" placeholder="Введіть пароль" label="Новий Пароль ще раз" name="passwordAgain"}}
+            <span name="passwordAgain" class="form__error">Помилка</span>
+          </div>
+          <button onclick="recoveryConfirmForm.submit()" class="button button--disabled" type="button">Змінити пароль</button>
+          <span class="alert alert--disabled">Внимание, ошибка!</span>
+       </form>
+    </div>
+</main>

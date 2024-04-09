@@ -8,14 +8,10 @@ main {
 	border: 1px solid #000;
 	border-radius: 12px;
 	padding: 14px;
-	width: 350px;
+	width: 400px;
 	display: grid;
 	gap: 14px;
-}
-
-.picture {
-	width: 100px;
-	height: 100px;
+    height: 500px;
 }
 
 .auth {
@@ -23,28 +19,8 @@ main {
 	font-size: 24px;
 }
 
-.button {
-	background: rgba(244, 111, 23, 1);
-	color: #fff;
-	padding: 12px;
-	border-radius: 12px;
-
-	@include s.click;
-
-    &:active {
-      opacity: 0.3;
-    }
-
-    &--disabled {
-      opacity: 0.5;
-      cursor: default;
-
-    &:hover,
-    &:active {
-       opacity: 0.5;
-       cursor: default;
-    }
-  }
+.page-divider {
+	border: 1px solid rgba(230, 230, 230, 1);
 }
 
 .section {
@@ -115,14 +91,4 @@ main {
 	&--active {
 	  border-color: s.color(red) !important;
 	}
-}
-
-.link-prefix {
-    font-size: 14px;
-    color: rgba(136, 136, 136, 1);
-}
-
-.link {
-    font-size: 14px;
-    color: rgba(244, 111, 23, 1);
 }

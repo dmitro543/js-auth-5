@@ -11,6 +11,7 @@ main {
 	width: 350px;
 	display: grid;
 	gap: 14px;
+    height: 500px;
 }
 
 .picture {
@@ -21,6 +22,7 @@ main {
 .auth {
 	font-weight: 700;
 	font-size: 24px;
+    margin-top: 50px;
 }
 
 .button {
