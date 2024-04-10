@@ -1,28 +1,28 @@
 @use '../../style' as s;
 
-// .label {
-//     font-size: 14px;
-// }
+.label {
+    font-size: 14px;
+}
 
-// .field {
-//     display: grid;
-//     gap: 12px;
-// }
+.field {
+    display: grid;
+    gap: 12px;
+}
 
-// .input {
-//     background: rgba(247, 247, 247, 1);
-//     padding: 12px;
-//     color: rgba(136, 136, 136, 1);
-//     font-size: 14px;
-// }
+.input {
+    background: rgba(247, 247, 247, 1);
+    padding: 12px;
+    color: rgba(136, 136, 136, 1);
+    font-size: 14px;
+}
 
-// .input:hover {
-//     border: 1px solid grey;
-// }
+.input:hover {
+    border: 1px solid grey;
+}
 
-// .input:focus {
-//     border: 1px solid rgba(247, 247, 247, 1);
-// }
+.input:focus {
+    border: 1px solid rgba(247, 247, 247, 1);
+}
 
 .field {
     display: flex;
