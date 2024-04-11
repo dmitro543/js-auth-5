@@ -27,6 +27,23 @@
     color: #fff;
     padding: 12px;
     border-radius: 12px;
+
+	@include s.click;
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      cursor: default;
+
+    &:hover,
+    &:active {
+       opacity: 0.5;
+       cursor: default;
+    }
+  }
 }
 
 .form {

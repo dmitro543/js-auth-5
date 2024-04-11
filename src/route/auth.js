@@ -74,10 +74,21 @@ router.post('/sign-up', function (req, res) {
   }
 
   try {
-     User.create({ email, password, role })
+    const user = User.getByEmail(email);
+      if(user) {
+        return res.status(400).json({
+          message: 'Помилка такий користувач вже існує'
+        })
+      }
+
+    const newUser = User.create({ email, password, role })
+    const session = Session.create(newUser)
+    Confirm.create(newUser.email)
+    User.create({ email, password, role })
 
      return res.status(200).json({
-       message: "Користувач успішно створений",
+       message: 'Користувач успішно створений',
+       session,
      })
    }  catch(err) {
      return res.status(400).json({
@@ -138,7 +149,7 @@ router.get('/home', function (req, res) {
 
 //       if(user) {
 //         return res.status(400).json({
-//           message: "Помилка такий користувач вже існує існує"
+//           message: "Помилка такий користувач вже існує"
 //         })
 //       }
 

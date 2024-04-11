@@ -1,4 +1,4 @@
-const { use } = require("../route/auth")
+// const { use } = require("../route/auth")
 
 class Session {
     static #list = []
