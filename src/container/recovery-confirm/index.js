@@ -23,11 +23,6 @@ class RecoveryConfirmForm extends Form {
       if(String(value).length > 20) {
          return this.FIELD_ERROR.IS_BIG
       }
-      if(name === this.FIELD_NAME.EMAIL) {
-         if(!REG_EXP_EMAIL.test(String(value))) {
-            return this.FIELD_ERROR.EMAIL
-         }
-      }
       if(name === this.FIELD_NAME.PASSWORD) {
          if(!REG_EXP_PASSWORD.test(String(value))) {
             return this.FIELD_ERROR.PASSWORD

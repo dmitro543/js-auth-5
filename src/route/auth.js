@@ -244,7 +244,7 @@ router.post('/sign-up-confirm', function (req, res) {
 })
 
 router.post('/recovery', function (req, res) {
-  const {email} = req.body
+  const  { email } = req.body
 
   console.log(email)
 
@@ -253,8 +253,6 @@ router.post('/recovery', function (req, res) {
       message: "Помилка обов'язкові поля відсутні"
     })
   }
-
-  const user = User.getByEmail(email);
 
   try {
       const user = User.getByEmail(email);

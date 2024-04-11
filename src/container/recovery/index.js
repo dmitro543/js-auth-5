@@ -44,6 +44,8 @@ class RecoveryForm extends Form {
 
            if(res.ok) {
              this.setAlert('success', data.message)
+             
+             location.assign('/recovery-confirm')
            } else {
               this.setAlert('error', data.message)
            }
@@ -61,4 +63,4 @@ class RecoveryForm extends Form {
    }
 }
 
-window.recoveryForm = RecoveryForm
+window.recoveryForm = new RecoveryForm()
