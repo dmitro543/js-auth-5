@@ -1,8 +1,8 @@
-import { list } from "../../script/list";
-
 import { USER_ROLE } from "../../script/user";
 
-class Userlist extends list {
+import { List } from "../../script/list";
+
+class UserList extends List {
     constructor () {
         super()
 
@@ -14,7 +14,6 @@ class Userlist extends list {
 
     loadData = async () => {
         this.updateStatus(this.STATE.LOADING)
-
         // return null
 
         try {
@@ -43,7 +42,7 @@ class Userlist extends list {
     convertData = (data) => {
         return {
             ...data,
-            list: data.list.map((item) => ({
+            list: data.list.map((user) => ({
                 ...user,
                 role: USER_ROLE[user.role],
             }))
@@ -59,8 +58,8 @@ class Userlist extends list {
             case this.STATE.LOADING:
                this.element.innerHTML = `
                  <div class="user">
-                   <span class="user__title"></span>
-                   <span class="user__sub"></span>
+                   <span class="user__title skeleton"></span>
+                   <span class="user__sub skeleton"></span>
                  </div>
                `
             break
@@ -68,10 +67,10 @@ class Userlist extends list {
             case this.STATE.SUCCESS:
                 this.data.list.forEach((item) => {
                     this.element.innerHTML += `
-                     <a href="/user-item?id=${item.id}" class="user user--click">
+                      <a href="/user-item?id=${item.id}" class="user user--click">
                         <span class="user__title">${item.email}</span>
                         <span class="user__sub">${item.role}</span>
-                     </a>
+                      </a>
                     `
                 });
             break
@@ -88,9 +87,10 @@ class Userlist extends list {
 document.addEventListener('DOMContentLoaded', () => {
     try {
       if(!window.session || !window.session.user.isConfirm) {
-         // location.assign('/')
+        //  location.assign('/')
      }
     } catch (err) {
-       new Userlist()
     }
+
+    new UserList()
 }) 

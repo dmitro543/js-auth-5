@@ -1,8 +1,8 @@
-import { list } from "../../script/list";
-
 import { USER_ROLE } from "../../script/user";
 
-class UserItem extends list {
+import { List } from "../../script/list";
+
+class UserItem extends List {
     constructor () {
        super()
 
@@ -18,7 +18,7 @@ class UserItem extends list {
     loadData = async () => {
         this.updateStatus(this.STATE.LOADING)
 
-        console.log(this.id)
+      //   console.log(this.id)
 
         try {
             const res = await fetch(`/user-id-item?id=${this.id}`,
@@ -115,7 +115,7 @@ class UserItem extends list {
 
 document.addEventListener('DOMContentLoaded', () => {
     if(!window.session || !window.session.user.isConfirm) {
-         // location.assign('/')
+         location.assign('/')
     }
        
     new UserItem()

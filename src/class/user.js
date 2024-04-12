@@ -58,7 +58,7 @@ class User {
         )
     }
 
-    static getList = () => {}
+    static getList = () => this.#list
 }
 
 module.exports = {

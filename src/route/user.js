@@ -63,12 +63,12 @@ router.get('/user-item-data', function (req, res) {
   }
 
   return res.status(200).json({
-    list: list.map(({ id, email, role}) => ({
+    user: {
       id: user.id,
       email: user.email,
       role: user.role,
       isConfirm: user.isConfirm,
-    })),
+    },
   })
 })
 
@@ -77,7 +77,7 @@ router.get('/user-list-data', function (req, res) {
 
    console.log(list)
 
-   if(list.length === 1) {
+   if(list.length === 0) {
      return res.status(400).json({
         message: 'Список користувачыв порожній',
      })
